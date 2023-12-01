@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyQuestions</title>
+    <link rel="stylesheet" type="text/css" href="/static/MyQuestions.css">
+</head>
+<body>
+    <form method="POST" action="/qlist">
+    <div class="container">
+        <h1 style="text-align: center;">QuestionHub</h1>
+                <ul>
+                    <li ><a href="/Home"><b>Home</b></a></li>
+                    <li ><a href="Profile.html"><b>Profile</b></a></li>
+                    <li ><a href="MyQuestions.html"><b>My Questions</b></a></li>
+                    <li ><a href="Questions.html"><b>Ask a question</b></a></li>
+                </ul>
+    </div>
+<div class="input">
+<input type="text" name="username" id="username" placeholder="Enter your username">
+<button type="submit" name="submit" >SUBMIT</button>
+</div>
+</form>
+<div class="container1">
+{% if values %}
+{% for i in values %}
+<div class="question">
+    <div class="content">
+        <p>{{ i[1] }}</p>
+        <a href="{{ url_for('answerdisp', res=i[0]) }}">View answer</a>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+</div>
+
+</body>
+</html>

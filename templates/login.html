@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <link rel="stylesheet" type="text/css" href="/static/login.css">
+</head>
+<body>
+  <h1><b>QuestionHub</b></h1>
+  <div class="container">
+    <h2>Sign in</h2>
+    <form method="POST" action="/" encrypt="multipart/forward-data">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="Password">Password:</label>
+        <input type="Password" id="Password" name="Password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" value="login">Sign In</button>
+      </div>
+      <div>
+        <p style="color:#fff">Not able to login, <a style="color:rgb(245, 241, 241); opacity: 1;" href="Newacc.html">Click here</a></p>
+        {% if error %}
+        <h3 style="color:#fff; text-align:center">{{ error }}</h3>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+</body>
+</html>

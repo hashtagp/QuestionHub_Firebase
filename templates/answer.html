@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/answer.css">
+</head>
+<body>
+    <form method="POST" action="/answer">
+    <div class="container">
+        <h1 style="text-align: center;">QuestionHub</h1>
+                <ul>
+                    <li ><a href="/Home"><b>Home</b></a></li>
+                    <li ><a href="Profile.html"><b>Profile</b></a></li>
+                    <li ><a href="MyQuestions.html"><b>My Questions</b></a></li>
+                    <li ><a href="Questions.html"><b>Ask a question</b></a></li>
+                </ul>
+    </div>
+    <div class="container1">
+            {% if value %}
+            <h2>Question:&nbsp;</h2>
+            <h2>{{ value[1] }}</h2>
+            <textarea style="height:100px; width:95%" id="answer" name="answer" placeholder="Enter your answer here"></textarea><br><br>
+            <input type="hidden" id="id" name="id" value="{{ value[0] }}">
+            {% endif %}
+            <div class="submit">
+            <input type="submit" name="submit" placeholder="SUBMIT">
+            </div>
+    </div>
+    </form>
+    
+</body>
+</html>

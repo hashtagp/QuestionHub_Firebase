@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answerdisp</title>
+    <link rel="stylesheet" type="text/css" href="/static/answerdisp.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">QuestionHub</h1>
+                <ul>
+                    <li ><a href="/Home"><b>Home</b></a></li>
+                    <li ><a href="Profile.html"><b>Profile</b></a></li>
+                    <li ><a href="MyQuestions.html"><b>My Questions</b></a></li>
+                    <li ><a href="Questions.html"><b>Ask a question</b></a></li>
+                </ul>
+    </div>
+<div class="container1">
+{% if value %}
+    <div class="answer">
+        <div class="content">
+            <h3>Question ID:{{ value[0] }}</h3>
+            <p>{{ value[1] }}</p>
+            <h3>Answer</h3>
+            <p>{{ value[2] }}</p>
+        </div>
+    </div>
+{% endif %}
+</div>
+</body>
+</html>

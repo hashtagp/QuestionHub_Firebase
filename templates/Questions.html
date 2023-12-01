@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" type="text/css" href="/static/Questions.css">
+</head>
+<body>
+    <form method="POST" action="/qinsert">
+     <div class="container">
+        <h1 style="text-align: center;">QuestionHub</h1>
+                <ul>
+                    <li ><a href="/Home"><b>Home</b></a></li>
+                    <li ><a href="Profile.html"><b>Profile</b></a></li>
+                    <li ><a href="MyQuestions.html"><b>My Questions</b></a></li>
+                    <li ><a href="Questions.html"><b>Ask a question</b></a></li>
+                </ul>
+        </div>
+    <div class="container1">
+        {% if error %}
+        <h3>{{ error }}</h3>
+        {% endif %}
+
+        <fieldset>
+            <legend><h2>Question</h2></legend>
+            <textarea style="height:100px; width:98%" id="question" name="question" placeholder="Enter your question here"></textarea><br><br>
+            <div class="input">
+            <input type="text" name="username" id="username" placeholder="Enter your username">
+            <button type="submit" name="submit" >SUBMIT</button>
+            </div>
+        </fieldset>
+    </div>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Account</title>
+    <link rel="stylesheet" type="text/css" href="/static/Newacc.css">
+</head>
+<body>
+  <div class="container">
+    <span class="redborderline"></span>
+    <form method="POST" action="/register" encrypt="multipart/forward-data">
+    <h2>Sign up</h2>
+      <div class="form-group">
+        <input type="text" id="username" name="username"  required>
+        <span>Username-unique</span>
+        <i></i>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="Phone" name="Phone" required>
+        <span>Phone number</span>
+        <i></i>
+      </div>
+      <div class="form-group">
+        <input type="Password" id="Password" name="Password"  required>
+        <span>Password</span>
+        <i></i><br>
+      </div>
+      <h5 style="color: #ffffe0;">Password must be of 8 characters</h5>
+      <div class="form-group">
+        <button type="submit" value="register">Sign Up</button>
+      </div>
+      {% if error %}
+      <h4 style="color: #ffffe0">{{ error }}</h3>
+      <a href="/">signin</a>
+      {% endif %}
+    </form>
+  </div>
+    
+</body>
+</html>
