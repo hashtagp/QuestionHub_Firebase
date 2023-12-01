@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    *
+    {margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-seriff;
+    }
+    .body{
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+    body{
+        background: #161623;
+    }
+    .container{
+        background-color: aqua;
+        height: 100px;
+    }
+
+    li{
+        display:inline-block;
+        line-height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin:2px;
+        text-align: center;
+        font-size: large;
+
+        
+    }
+    
+    li:hover{
+        background-color: aquamarine;
+    }
+
+    .container1{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        z-index: 1;
+    }
+
+    .container1 .question{
+        position: relative;
+        width: 1100px;
+        height: auto;
+        margin: 30px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+    .container1 .question .content{
+        padding: 20px;
+        text-align: left;
+        transition: 0.5s;
+    }
+
+    .container1 .question .content p{
+        font-size: 1em;
+        color: #fff;
+        z-index: 1;
+    }
+
+
+    .container1 .question .content a{
+        position: relative;
+        display: inline-block;
+        padding: 8px 20px;
+        margin-top: 15px;
+        background: #fff;
+        color: #000;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .input{
+        margin-top: 10px;
+        margin-left: 350px;
+        margin-bottom: 10px;
+        background: #fff;
+        width: 500px;
+        height: 45px;
+        display: flex;
+        }
+
+        .input input{
+            border: none;
+            outline: none;
+            height: 45px;
+            width: 1100px;
+            padding-left: 10px;
+        }
+
+        .input button{
+            background: tomato;
+            padding: 5px 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
